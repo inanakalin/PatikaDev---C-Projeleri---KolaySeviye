@@ -4,8 +4,9 @@
     {
        // Fibonacci();    // *** Kolay Seviye Projeler - Ortalama Hesaplama  *** Kulanıcıdan alınan derinliğe göre fibonacci
                           // serisindeki rakamların ortalamasını alıp ekrana yazdıran uygulamayı yazınız.
-       // Triangle();       // *** Kolay Seviye Projeler - Ortalama Hesaplama
+        //Triangle();     // *** Kolay Seviye Projeler - Ortalama Hesaplama
                           // Kullanıcıdan alınan boyut bilgisine göre console'a Üçgen çizen uygulamayı yazınız.
+        Circle();         // Kullanıcıdan alınan yarıçapa göre console'a Daire çizen uygulama 
 
     }
 
@@ -26,7 +27,7 @@
 
         Console.WriteLine(fiboort);        
     }
-    public static void Triangle()   // Üçgen çizen
+    public static void Triangle()    // Üçgen çizen
     {
         Console.Write("Üçgenin kenar uzunluğunu girin: ");
         int kenarUzunlugu = int.Parse(Console.ReadLine());
@@ -44,7 +45,21 @@
             Console.WriteLine();
         }
     }
+    public static void Circle()      // Çember çizen
+    {
+        Console.Write("Dairenin yarıçapını girin: ");
+        int radius = int.Parse(Console.ReadLine());
 
-
-
+        for (double y = -radius; y <= radius; y++)
+        {
+            for (double x = -radius; x <= radius; x += 0.5)
+            {
+                if ((x * x) + (y * y) >= radius * radius)
+                    Console.Write(" ");
+                else
+                    Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
 }
