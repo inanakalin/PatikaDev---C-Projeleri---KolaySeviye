@@ -5,15 +5,17 @@ internal class Program
     private static void Main(string[] args)
     {
         // Fibonacci();      // *** Kolay Seviye Projeler - Ortalama Hesaplama  *** Kulanıcıdan alınan derinliğe göre fibonacci
-                             // serisindeki rakamların ortalamasını alıp ekrana yazdıran uygulamayı yazınız.
+        // serisindeki rakamların ortalamasını alıp ekrana yazdıran uygulamayı yazınız.
 
         //Triangle();        // *** Kolay Seviye Projeler - Ortalama Hesaplama
-                             // Kullanıcıdan alınan boyut bilgisine göre console'a Üçgen çizen uygulamayı yazınız.
+        // Kullanıcıdan alınan boyut bilgisine göre console'a Üçgen çizen uygulamayı yazınız.
 
         // Circle();         // Kullanıcıdan alınan yarıçapa göre console'a Daire çizen uygulama 
 
-        Algoritma();        //Ekrandan bir string bir de sayı alan (aralarında virgül ile), ilgili string
-                            //ifade içerisinden verilen indexteki karakteri çıkartıp ekrana yazdıran console uygulasını yazınız.
+        //Algoritma();        //Ekrandan bir string bir de sayı alan (aralarında virgül ile), ilgili string
+        //ifade içerisinden verilen indexteki karakteri çıkartıp ekrana yazdıran console uygulasını yazınız.
+
+        ReverseTitle();
 
     }
 
@@ -86,4 +88,18 @@ internal class Program
         
 
     }
+    public static void ReverseTitle()
+    {
+        Console.Write(" metin girin: ");
+        string input = Console.ReadLine();
+        string output = "";
+
+        for (int i = input.Length - 1; i >= 0; i--)
+        {
+            output += input[i];
+        }
+
+        Console.WriteLine("Ters Hali : " + output);
+    }
+
 }
