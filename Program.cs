@@ -1,12 +1,19 @@
-﻿internal class Program
+﻿using System.Collections;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-       // Fibonacci();    // *** Kolay Seviye Projeler - Ortalama Hesaplama  *** Kulanıcıdan alınan derinliğe göre fibonacci
-                          // serisindeki rakamların ortalamasını alıp ekrana yazdıran uygulamayı yazınız.
-        //Triangle();     // *** Kolay Seviye Projeler - Ortalama Hesaplama
-                          // Kullanıcıdan alınan boyut bilgisine göre console'a Üçgen çizen uygulamayı yazınız.
-        Circle();         // Kullanıcıdan alınan yarıçapa göre console'a Daire çizen uygulama 
+        // Fibonacci();      // *** Kolay Seviye Projeler - Ortalama Hesaplama  *** Kulanıcıdan alınan derinliğe göre fibonacci
+                             // serisindeki rakamların ortalamasını alıp ekrana yazdıran uygulamayı yazınız.
+
+        //Triangle();        // *** Kolay Seviye Projeler - Ortalama Hesaplama
+                             // Kullanıcıdan alınan boyut bilgisine göre console'a Üçgen çizen uygulamayı yazınız.
+
+        // Circle();         // Kullanıcıdan alınan yarıçapa göre console'a Daire çizen uygulama 
+
+        Algoritma();        //Ekrandan bir string bir de sayı alan (aralarında virgül ile), ilgili string
+                            //ifade içerisinden verilen indexteki karakteri çıkartıp ekrana yazdıran console uygulasını yazınız.
 
     }
 
@@ -61,5 +68,22 @@
             }
             Console.WriteLine();
         }
+    }
+    public static void Algoritma()
+    {
+        Console.Write("bir kelime ve bir sayı giriniz (virgül ile ayırınız):    "   );
+        string input = Console.ReadLine();
+        string[] _input = input.Split(',');
+        int sayi = int.Parse(_input[1]);
+        Console.WriteLine(sayi);
+        _input[0].Remove(sayi - 1);
+        Console.WriteLine(_input[0].Remove(sayi-1,1));
+        
+
+              
+
+       
+        
+
     }
 }
